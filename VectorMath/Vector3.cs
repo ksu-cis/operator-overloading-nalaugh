@@ -16,13 +16,55 @@ namespace VectorMath
             Y = y;
             Z = z;
         }
+        public override string ToString()
+        {
+            return $"<{X}, {Y}, {Z}>";
+        }
+
+        public static Vector3 operator +(Vector3 a, Vector3 b)
+        {
+            return new Vector3(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
+        }
 
         // Vector Addition
+        public static Vector3 Add(Vector3 a, Vector3 b)
+        {
+            return new Vector3(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
+        }
+
+
+        public void Add(Vector3 other)
+        {
+            this.X += other.X;
+            this.Y += other.Y;
+            this.Z += other.Z;
+        }
 
         // Vector Subtraction 
+        public static Vector3 operator -(Vector3 a, Vector3 b)
+        {
+            return new Vector3(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
+        }
+
 
         // Vector Scaling 
+        public static Vector3 operator *(double a, Vector3 b)
+        {
+            return new Vector3(a * b.X, a * b.Y, a * b.Z);
+        }
+        public static Vector3 operator *(Vector3 b, double a)
+        {
+            return new Vector3(a * b.X, a * b.Y, a * b.Z);
+        }
 
         // Vector Comparison
+        public static bool operator ==(Vector3 a, Vector3 b)
+            {
+            return a.X == b.X && a.Y == b.Y && a.Z == b.Z;
+            }
+        public static bool operator !=(Vector3 a, Vector3 b)
+        {
+            return a.X != b.X || a.Y != b.Y || a.Z != b.Z;
+        }
     }
 }
