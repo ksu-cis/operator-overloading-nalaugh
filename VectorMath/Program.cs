@@ -28,6 +28,14 @@ namespace VectorMath
             {
                 Console.WriteLine("Vector one is zero");
             }
+            if (new Vector3(0,0,0))
+            {
+                Console.WriteLine("Vector one is not zero");
+            }
+            else
+            {
+                Console.WriteLine("Vector one is zero");
+            }
         }
     }
 }
