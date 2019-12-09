@@ -66,5 +66,15 @@ namespace VectorMath
         {
             return a.X != b.X || a.Y != b.Y || a.Z != b.Z;
         }
+        public static readonly Vector3 Zero = new Vector3(0, 0, 0);
+
+        public static bool operator true(Vector3 a)
+        {
+            return Vector3.Zero != a;
+        }
+        public static bool operator false(Vector3 a)
+        {
+            return Vector3.Zero == a;
+        }
     }
 }

@@ -19,6 +19,15 @@ namespace VectorMath
             Console.WriteLine($"With scaler operartor overload: {10 * one}");
             Console.WriteLine($"With comparison: {one == two}");
             Console.WriteLine($"With comparison: {one == new Vector3(5,4,3)}");
+
+            if (one)
+            {
+                Console.WriteLine("Vector one is not zero");
+            }
+            else
+            {
+                Console.WriteLine("Vector one is zero");
+            }
         }
     }
 }
